@@ -1,0 +1,6 @@
+etName : //android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_name"]
+etWeight : //android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_weight"]
+etHeight : //android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_height"]
+rbMale : //android.widget.RadioButton[@resource-id="com.fghilmany.dietmealapp:id/rb_male"]
+rbFemale : //android.widget.RadioButton[@resource-id="com.fghilmany.dietmealapp:id/rb_female"]
+btnNext : //android.widget.Button[@resource-id="com.fghilmany.dietmealapp:id/bt_next"]
