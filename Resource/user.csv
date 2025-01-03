@@ -1,0 +1,6 @@
+﻿*** Test Cases ***,${username},${height},${weight}
+Case 1,budi,50,50
+Case 2,budidua,165,55
+Case 3,buditiga,180,60
+Case 4,budiempat,160,60
+Case 5,budilima,155,80

@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.0 on win32)" generated="2025-01-03T11:39:34.134579" rpa="false" schemaversion="5">
+<suite id="s1" name="appDietStep" source="C:\Belajar QA\DietApp-AutomaticTest\Step\appDietStep.robot">
+<kw name="Start Session Application" owner="appDietPages" type="SETUP">
+<kw name="Set Appium Timeout" owner="AppiumLibrary">
+<arg>5</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" start="2025-01-03T11:39:34.575839" elapsed="0.000706"/>
+</kw>
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>platformName=Android</arg>
+<arg>platformVersion=11.0</arg>
+<arg>deviceName=UwU</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>appPackage=com.fghilmany.dietmealapp</arg>
+<arg>appActivity=com.fghilmany.dietmealapp.ui.main.MainActivity</arg>
+<arg>noReset=true</arg>
+<arg>autoGrantPermission=true</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-01-03T11:39:34.577198" elapsed="14.656379"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-03T11:39:50.234723" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-03T11:39:49.233891" elapsed="1.001030"/>
+</kw>
+<status status="PASS" start="2025-01-03T11:39:34.574433" elapsed="15.660645"/>
+</kw>
+<test id="s1-t1" name="Input user data" line="23">
+<kw name="Input user data">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-03T11:39:50.237314" level="INFO">Username: budi, Height: 50, Weight: 50</msg>
+<arg>Username: ${username}, Height: ${height}, Weight: ${weight}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-03T11:39:50.237108" elapsed="0.000268"/>
+</kw>
+<kw name="Open Session App" owner="appDietPages">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-03T11:39:55.238218" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-03T11:39:50.237743" elapsed="5.000603"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2025-01-03T11:39:56.342526" level="INFO">Current page contains text 'Welcome'.</msg>
+<arg>Welcome</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2025-01-03T11:39:55.238554" elapsed="1.104068"/>
+</kw>
+<status status="PASS" start="2025-01-03T11:39:50.237523" elapsed="6.105201"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-01-03T11:39:56.344136" level="INFO">Typing text 'budi' into text field '//android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_name"]'</msg>
+<msg time="2025-01-03T11:39:58.528493" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_name"]</msg>
+<arg>${etName}</arg>
+<arg>${username}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-01-03T11:39:56.342859" elapsed="2.185721"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-01-03T11:39:58.530212" level="INFO">Typing text '50' into text field '//android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_weight"]'</msg>
+<msg time="2025-01-03T11:40:00.157782" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_weight"]</msg>
+<arg>${etWeight}</arg>
+<arg>${weight}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-01-03T11:39:58.528747" elapsed="1.629169"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-01-03T11:40:00.159880" level="INFO">Typing text '50' into text field '//android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_height"]'</msg>
+<msg time="2025-01-03T11:40:01.398431" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_height"]</msg>
+<arg>${etHeight}</arg>
+<arg>${height}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-01-03T11:40:00.158130" elapsed="1.240396"/>
+</kw>
+<kw name="Tap" owner="AppiumLibrary">
+<msg time="2025-01-03T11:40:01.398750" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2025-01-03T11:40:02.353966" level="INFO">xpath criteria: //android.widget.RadioButton[@resource-id="com.fghilmany.dietmealapp:id/rb_male"]</msg>
+<arg>${rbMale}</arg>
+<doc>*DEPRECATED!!* Since selenium v4, use `Tap With Positions` keyword.</doc>
+<status status="PASS" start="2025-01-03T11:40:01.398711" elapsed="0.955377"/>
+</kw>
+<kw name="User Tap Next Button" owner="appDietPages">
+<kw name="Tap" owner="AppiumLibrary">
+<msg time="2025-01-03T11:40:02.354957" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2025-01-03T11:40:03.541896" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.fghilmany.dietmealapp:id/bt_next"]</msg>
+<arg>${btnNext}</arg>
+<doc>*DEPRECATED!!* Since selenium v4, use `Tap With Positions` keyword.</doc>
+<status status="PASS" start="2025-01-03T11:40:02.354902" elapsed="1.187117"/>
+</kw>
+<status status="PASS" start="2025-01-03T11:40:02.354402" elapsed="1.187766"/>
+</kw>
+<kw name="Navigation Back" owner="appDietPages">
+<kw name="Press Keycode" owner="AppiumLibrary">
+<arg>4</arg>
+<doc>Sends a press of keycode to the device.</doc>
+<status status="PASS" start="2025-01-03T11:40:03.542730" elapsed="1.023840"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2025-01-03T11:40:05.532031" level="INFO">Current page contains text 'Welcome'.</msg>
+<arg>Welcome</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2025-01-03T11:40:04.566800" elapsed="0.965337"/>
+</kw>
+<status status="PASS" start="2025-01-03T11:40:03.542395" elapsed="1.989849"/>
+</kw>
+<arg>username=budi</arg>
+<arg>height=50</arg>
+<arg>weight=50</arg>
+<status status="PASS" start="2025-01-03T11:39:50.236724" elapsed="15.295591"/>
+</kw>
+<status status="PASS" start="2025-01-03T11:39:50.235197" elapsed="15.297492"/>
+</test>
+<test id="s1-t2" name="Input user data" line="23">
+<kw name="Input user data">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-03T11:40:05.535963" level="INFO">Username: budidua, Height: 165, Weight: 55</msg>
+<arg>Username: ${username}, Height: ${height}, Weight: ${weight}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-03T11:40:05.535728" elapsed="0.000302"/>
+</kw>
+<kw name="Open Session App" owner="appDietPages">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-03T11:40:10.536747" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-03T11:40:05.536457" elapsed="5.000421"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2025-01-03T11:40:11.343107" level="INFO">Current page contains text 'Welcome'.</msg>
+<arg>Welcome</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2025-01-03T11:40:10.537067" elapsed="0.806147"/>
+</kw>
+<status status="PASS" start="2025-01-03T11:40:05.536199" elapsed="5.807120"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-01-03T11:40:11.345284" level="INFO">Typing text 'budidua' into text field '//android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_name"]'</msg>
+<msg time="2025-01-03T11:40:12.237434" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_name"]</msg>
+<arg>${etName}</arg>
+<arg>${username}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-01-03T11:40:11.343472" elapsed="0.894050"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-01-03T11:40:12.240020" level="INFO">Typing text '55' into text field '//android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_weight"]'</msg>
+<msg time="2025-01-03T11:40:14.241822" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_weight"]</msg>
+<arg>${etWeight}</arg>
+<arg>${weight}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-01-03T11:40:12.237689" elapsed="2.004225"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-01-03T11:40:14.243804" level="INFO">Typing text '165' into text field '//android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_height"]'</msg>
+<msg time="2025-01-03T11:40:17.269360" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_height"]</msg>
+<arg>${etHeight}</arg>
+<arg>${height}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-01-03T11:40:14.242084" elapsed="3.027390"/>
+</kw>
+<kw name="Tap" owner="AppiumLibrary">
+<msg time="2025-01-03T11:40:17.269724" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2025-01-03T11:40:18.629919" level="INFO">xpath criteria: //android.widget.RadioButton[@resource-id="com.fghilmany.dietmealapp:id/rb_male"]</msg>
+<arg>${rbMale}</arg>
+<doc>*DEPRECATED!!* Since selenium v4, use `Tap With Positions` keyword.</doc>
+<status status="PASS" start="2025-01-03T11:40:17.269684" elapsed="1.360356"/>
+</kw>
+<kw name="User Tap Next Button" owner="appDietPages">
+<kw name="Tap" owner="AppiumLibrary">
+<msg time="2025-01-03T11:40:18.630830" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2025-01-03T11:40:19.586750" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.fghilmany.dietmealapp:id/bt_next"]</msg>
+<arg>${btnNext}</arg>
+<doc>*DEPRECATED!!* Since selenium v4, use `Tap With Positions` keyword.</doc>
+<status status="PASS" start="2025-01-03T11:40:18.630787" elapsed="0.956069"/>
+</kw>
+<status status="PASS" start="2025-01-03T11:40:18.630334" elapsed="0.956640"/>
+</kw>
+<kw name="Navigation Back" owner="appDietPages">
+<kw name="Press Keycode" owner="AppiumLibrary">
+<arg>4</arg>
+<doc>Sends a press of keycode to the device.</doc>
+<status status="PASS" start="2025-01-03T11:40:19.587538" elapsed="0.857899"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2025-01-03T11:40:21.388568" level="INFO">Current page contains text 'Welcome'.</msg>
+<arg>Welcome</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2025-01-03T11:40:20.445621" elapsed="0.943051"/>
+</kw>
+<status status="PASS" start="2025-01-03T11:40:19.587189" elapsed="1.801589"/>
+</kw>
+<arg>username=budidua</arg>
+<arg>height=165</arg>
+<arg>weight=55</arg>
+<status status="PASS" start="2025-01-03T11:40:05.535339" elapsed="15.853508"/>
+</kw>
+<status status="PASS" start="2025-01-03T11:40:05.533864" elapsed="15.855280"/>
+</test>
+<test id="s1-t3" name="Input user data" line="23">
+<kw name="Input user data">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-03T11:40:21.392073" level="INFO">Username: buditiga, Height: 180, Weight: 60</msg>
+<arg>Username: ${username}, Height: ${height}, Weight: ${weight}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-03T11:40:21.391790" elapsed="0.000379"/>
+</kw>
+<kw name="Open Session App" owner="appDietPages">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-03T11:40:26.393022" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-03T11:40:21.392684" elapsed="5.000490"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2025-01-03T11:40:26.529072" level="INFO">Current page contains text 'Welcome'.</msg>
+<arg>Welcome</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2025-01-03T11:40:26.393384" elapsed="0.135792"/>
+</kw>
+<status status="PASS" start="2025-01-03T11:40:21.392389" elapsed="5.136896"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-01-03T11:40:26.531017" level="INFO">Typing text 'buditiga' into text field '//android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_name"]'</msg>
+<msg time="2025-01-03T11:40:27.344342" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_name"]</msg>
+<arg>${etName}</arg>
+<arg>${username}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-01-03T11:40:26.529438" elapsed="0.815014"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-01-03T11:40:27.346068" level="INFO">Typing text '60' into text field '//android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_weight"]'</msg>
+<msg time="2025-01-03T11:40:29.325066" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_weight"]</msg>
+<arg>${etWeight}</arg>
+<arg>${weight}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-01-03T11:40:27.344672" elapsed="1.980481"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-01-03T11:40:29.326818" level="INFO">Typing text '180' into text field '//android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_height"]'</msg>
+<msg time="2025-01-03T11:40:31.411986" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_height"]</msg>
+<arg>${etHeight}</arg>
+<arg>${height}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-01-03T11:40:29.325317" elapsed="2.086807"/>
+</kw>
+<kw name="Tap" owner="AppiumLibrary">
+<msg time="2025-01-03T11:40:31.412331" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2025-01-03T11:40:32.852931" level="INFO">xpath criteria: //android.widget.RadioButton[@resource-id="com.fghilmany.dietmealapp:id/rb_male"]</msg>
+<arg>${rbMale}</arg>
+<doc>*DEPRECATED!!* Since selenium v4, use `Tap With Positions` keyword.</doc>
+<status status="PASS" start="2025-01-03T11:40:31.412297" elapsed="1.440741"/>
+</kw>
+<kw name="User Tap Next Button" owner="appDietPages">
+<kw name="Tap" owner="AppiumLibrary">
+<msg time="2025-01-03T11:40:32.853608" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2025-01-03T11:40:33.840196" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.fghilmany.dietmealapp:id/bt_next"]</msg>
+<arg>${btnNext}</arg>
+<doc>*DEPRECATED!!* Since selenium v4, use `Tap With Positions` keyword.</doc>
+<status status="PASS" start="2025-01-03T11:40:32.853578" elapsed="0.986705"/>
+</kw>
+<status status="PASS" start="2025-01-03T11:40:32.853254" elapsed="0.987138"/>
+</kw>
+<kw name="Navigation Back" owner="appDietPages">
+<kw name="Press Keycode" owner="AppiumLibrary">
+<arg>4</arg>
+<doc>Sends a press of keycode to the device.</doc>
+<status status="PASS" start="2025-01-03T11:40:33.841087" elapsed="0.784688"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2025-01-03T11:40:35.506023" level="INFO">Current page contains text 'Welcome'.</msg>
+<arg>Welcome</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2025-01-03T11:40:34.626031" elapsed="0.880257"/>
+</kw>
+<status status="PASS" start="2025-01-03T11:40:33.840649" elapsed="1.665756"/>
+</kw>
+<arg>username=buditiga</arg>
+<arg>height=180</arg>
+<arg>weight=60</arg>
+<status status="PASS" start="2025-01-03T11:40:21.391403" elapsed="14.115073"/>
+</kw>
+<status status="PASS" start="2025-01-03T11:40:21.390012" elapsed="14.116754"/>
+</test>
+<test id="s1-t4" name="Input user data" line="23">
+<kw name="Input user data">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-03T11:40:35.510041" level="INFO">Username: budiempat, Height: 160, Weight: 60</msg>
+<arg>Username: ${username}, Height: ${height}, Weight: ${weight}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-03T11:40:35.509806" elapsed="0.000306"/>
+</kw>
+<kw name="Open Session App" owner="appDietPages">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-03T11:40:40.510958" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-03T11:40:35.510591" elapsed="5.000488"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2025-01-03T11:40:40.621447" level="INFO">Current page contains text 'Welcome'.</msg>
+<arg>Welcome</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2025-01-03T11:40:40.511255" elapsed="0.110297"/>
+</kw>
+<status status="PASS" start="2025-01-03T11:40:35.510303" elapsed="5.111359"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-01-03T11:40:40.623421" level="INFO">Typing text 'budiempat' into text field '//android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_name"]'</msg>
+<msg time="2025-01-03T11:40:41.491356" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_name"]</msg>
+<arg>${etName}</arg>
+<arg>${username}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-01-03T11:40:40.621814" elapsed="0.869754"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-01-03T11:40:41.493152" level="INFO">Typing text '60' into text field '//android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_weight"]'</msg>
+<msg time="2025-01-03T11:40:44.566807" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_weight"]</msg>
+<arg>${etWeight}</arg>
+<arg>${weight}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-01-03T11:40:41.491742" elapsed="3.075153"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-01-03T11:40:44.568725" level="INFO">Typing text '160' into text field '//android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_height"]'</msg>
+<msg time="2025-01-03T11:40:46.887155" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_height"]</msg>
+<arg>${etHeight}</arg>
+<arg>${height}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-01-03T11:40:44.567133" elapsed="2.320110"/>
+</kw>
+<kw name="Tap" owner="AppiumLibrary">
+<msg time="2025-01-03T11:40:46.887439" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2025-01-03T11:40:48.527108" level="INFO">xpath criteria: //android.widget.RadioButton[@resource-id="com.fghilmany.dietmealapp:id/rb_male"]</msg>
+<arg>${rbMale}</arg>
+<doc>*DEPRECATED!!* Since selenium v4, use `Tap With Positions` keyword.</doc>
+<status status="PASS" start="2025-01-03T11:40:46.887409" elapsed="1.639787"/>
+</kw>
+<kw name="User Tap Next Button" owner="appDietPages">
+<kw name="Tap" owner="AppiumLibrary">
+<msg time="2025-01-03T11:40:48.527716" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2025-01-03T11:40:48.944044" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.fghilmany.dietmealapp:id/bt_next"]</msg>
+<arg>${btnNext}</arg>
+<doc>*DEPRECATED!!* Since selenium v4, use `Tap With Positions` keyword.</doc>
+<status status="PASS" start="2025-01-03T11:40:48.527689" elapsed="0.416498"/>
+</kw>
+<status status="PASS" start="2025-01-03T11:40:48.527404" elapsed="0.416942"/>
+</kw>
+<kw name="Navigation Back" owner="appDietPages">
+<kw name="Press Keycode" owner="AppiumLibrary">
+<arg>4</arg>
+<doc>Sends a press of keycode to the device.</doc>
+<status status="PASS" start="2025-01-03T11:40:48.945285" elapsed="0.622438"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2025-01-03T11:40:50.663621" level="INFO">Current page contains text 'Welcome'.</msg>
+<arg>Welcome</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2025-01-03T11:40:49.568033" elapsed="1.095685"/>
+</kw>
+<status status="PASS" start="2025-01-03T11:40:48.944714" elapsed="1.719105"/>
+</kw>
+<arg>username=budiempat</arg>
+<arg>height=160</arg>
+<arg>weight=60</arg>
+<status status="PASS" start="2025-01-03T11:40:35.509360" elapsed="15.154515"/>
+</kw>
+<status status="PASS" start="2025-01-03T11:40:35.507721" elapsed="15.156412"/>
+</test>
+<test id="s1-t5" name="Input user data" line="23">
+<kw name="Input user data">
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-01-03T11:40:50.666518" level="INFO">Username: budilima, Height: 155, Weight: 80</msg>
+<arg>Username: ${username}, Height: ${height}, Weight: ${weight}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-01-03T11:40:50.666334" elapsed="0.000239"/>
+</kw>
+<kw name="Open Session App" owner="appDietPages">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-03T11:40:55.667291" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-03T11:40:50.666929" elapsed="5.000492"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2025-01-03T11:40:55.775986" level="INFO">Current page contains text 'Welcome'.</msg>
+<arg>Welcome</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2025-01-03T11:40:55.667610" elapsed="0.108472"/>
+</kw>
+<status status="PASS" start="2025-01-03T11:40:50.666711" elapsed="5.109464"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-01-03T11:40:55.777622" level="INFO">Typing text 'budilima' into text field '//android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_name"]'</msg>
+<msg time="2025-01-03T11:40:56.685160" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_name"]</msg>
+<arg>${etName}</arg>
+<arg>${username}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-01-03T11:40:55.776303" elapsed="0.908957"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-01-03T11:40:56.687342" level="INFO">Typing text '80' into text field '//android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_weight"]'</msg>
+<msg time="2025-01-03T11:40:59.688507" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_weight"]</msg>
+<arg>${etWeight}</arg>
+<arg>${weight}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-01-03T11:40:56.685453" elapsed="3.003154"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-01-03T11:40:59.690466" level="INFO">Typing text '155' into text field '//android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_height"]'</msg>
+<msg time="2025-01-03T11:41:02.966747" level="INFO">xpath criteria: //android.widget.EditText[@resource-id="com.fghilmany.dietmealapp:id/et_height"]</msg>
+<arg>${etHeight}</arg>
+<arg>${height}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-01-03T11:40:59.688796" elapsed="3.278117"/>
+</kw>
+<kw name="Tap" owner="AppiumLibrary">
+<msg time="2025-01-03T11:41:02.967157" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2025-01-03T11:41:04.709901" level="INFO">xpath criteria: //android.widget.RadioButton[@resource-id="com.fghilmany.dietmealapp:id/rb_male"]</msg>
+<arg>${rbMale}</arg>
+<doc>*DEPRECATED!!* Since selenium v4, use `Tap With Positions` keyword.</doc>
+<status status="PASS" start="2025-01-03T11:41:02.967125" elapsed="1.742874"/>
+</kw>
+<kw name="User Tap Next Button" owner="appDietPages">
+<kw name="Tap" owner="AppiumLibrary">
+<msg time="2025-01-03T11:41:04.710760" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2025-01-03T11:41:05.155719" level="INFO">xpath criteria: //android.widget.Button[@resource-id="com.fghilmany.dietmealapp:id/bt_next"]</msg>
+<arg>${btnNext}</arg>
+<doc>*DEPRECATED!!* Since selenium v4, use `Tap With Positions` keyword.</doc>
+<status status="PASS" start="2025-01-03T11:41:04.710716" elapsed="0.445435"/>
+</kw>
+<status status="PASS" start="2025-01-03T11:41:04.710232" elapsed="0.446063"/>
+</kw>
+<kw name="Navigation Back" owner="appDietPages">
+<kw name="Press Keycode" owner="AppiumLibrary">
+<arg>4</arg>
+<doc>Sends a press of keycode to the device.</doc>
+<status status="PASS" start="2025-01-03T11:41:05.157057" elapsed="0.572690"/>
+</kw>
+<kw name="Page Should Contain Text" owner="AppiumLibrary">
+<msg time="2025-01-03T11:41:06.849120" level="INFO">Current page contains text 'Welcome'.</msg>
+<arg>Welcome</arg>
+<doc>Verifies that current page contains `text`.</doc>
+<status status="PASS" start="2025-01-03T11:41:05.729989" elapsed="1.119228"/>
+</kw>
+<status status="PASS" start="2025-01-03T11:41:05.156562" elapsed="1.692760"/>
+</kw>
+<arg>username=budilima</arg>
+<arg>height=155</arg>
+<arg>weight=80</arg>
+<status status="PASS" start="2025-01-03T11:40:50.666016" elapsed="16.183383"/>
+</kw>
+<status status="PASS" start="2025-01-03T11:40:50.664848" elapsed="16.184869"/>
+</test>
+<kw name="Close Session Application" owner="appDietPages" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2025-01-03T11:41:07.681541" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Result/result_documentation.png"&gt;&lt;img src="Result/result_documentation.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${OUTPUT_DIR}/Result/result_documentation.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="PASS" start="2025-01-03T11:41:06.851004" elapsed="0.830721"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-01-03T11:41:10.682639" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-01-03T11:41:07.681991" elapsed="3.000783"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2025-01-03T11:41:10.682969" elapsed="0.490723"/>
+</kw>
+<status status="PASS" start="2025-01-03T11:41:06.850748" elapsed="4.323111"/>
+</kw>
+<status status="PASS" start="2025-01-03T11:39:34.137195" elapsed="97.036727"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="appDietStep">appDietStep</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-01-03T11:40:01.398750" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2025-01-03T11:40:02.354957" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2025-01-03T11:40:05.533596" level="WARN">Multiple tests with name 'Input user data' executed in suite 'appDietStep'.</msg>
+<msg time="2025-01-03T11:40:17.269724" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2025-01-03T11:40:18.630830" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2025-01-03T11:40:21.389802" level="WARN">Multiple tests with name 'Input user data' executed in suite 'appDietStep'.</msg>
+<msg time="2025-01-03T11:40:31.412331" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2025-01-03T11:40:32.853608" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2025-01-03T11:40:35.507492" level="WARN">Multiple tests with name 'Input user data' executed in suite 'appDietStep'.</msg>
+<msg time="2025-01-03T11:40:46.887439" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2025-01-03T11:40:48.527716" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2025-01-03T11:40:50.664652" level="WARN">Multiple tests with name 'Input user data' executed in suite 'appDietStep'.</msg>
+<msg time="2025-01-03T11:41:02.967157" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+<msg time="2025-01-03T11:41:04.710760" level="WARN">Keyword 'AppiumLibrary.Tap' is deprecated. Since selenium v4, use `Tap With Positions` keyword.</msg>
+</errors>
+</robot>

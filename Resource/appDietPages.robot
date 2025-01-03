@@ -19,14 +19,16 @@ Start Session Application
     ...    autoGrantPermission=true
     Sleep    1
 
-User Input Welcome Data Male
-    Input Text    ${etName}    Budi
-    Input Text    ${etWeight}    50
-    Input Text    ${etHeight}    166
-    Tap    ${rbMale}
+Open Session App
+    Sleep    5
+    Page Should Contain Text    Welcome
 
 User Tap Next Button
     Tap    ${btnNext}
+
+Navigation Back
+    Press Keycode    4
+    Page Should Contain Text    Welcome
 
 Close Session Application
     #Capture Page Screenshot    ${OUTPUT_DIR}/Result/result_documentation_${screenshot_counter}.png
